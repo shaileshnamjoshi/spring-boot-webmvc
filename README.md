@@ -8,17 +8,11 @@ The example can be built with
 
     mvn clean install
 
-### Running the example in Kubernetes
+### Running the example in OpenShift
 
-It is assumed a running Kubernetes platform is already running. If not you can find details how to [get started](http://fabric8.io/guide/getStarted/index.html).
+It is assumed a running cluster is already running. If not you can find details how to [get started](http://fabric8.io/guide/getStarted/index.html).
 
 Assuming your current shell is connected to Kubernetes or OpenShift so that you can type a command like
-
-```
-kubectl get pods
-```
-
-or for OpenShift
 
 ```
 oc get pods
@@ -27,12 +21,9 @@ oc get pods
 Then the following command will package your app and run it on Kubernetes:
 
 ```
-mvn fabric8:run
+mvn clean fabric8:deploy
 ```
 
-To list all the running pods:
-
-    oc get pods
 
 Then find the name of the pod that runs this quickstart, and output the logs from the running pods with:
 
